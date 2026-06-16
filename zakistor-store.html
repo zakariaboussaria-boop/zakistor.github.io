@@ -72,7 +72,7 @@
   .nav-links a{transition:color .25s var(--ease);font-size:15px;}
   .nav-links a:hover{color:var(--text-primary);}
   .nav-actions{display:flex;align-items:center;gap:18px;}
-  .cart-btn{position:relative;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--border-subtle);transition:border-color .25s,transform .2s;}
+  .cart-btn{position:relative;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--border-subtle);transition:border-color .25s,transform .25s;}
   .cart-btn:hover{border-color:var(--neon-cyan);transform:translateY(-1px);}
   .cart-count{position:absolute;top:-6px;left:-6px;background:var(--neon-pink);color:#1a0a14;font-size:11px;font-weight:700;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
   .burger{display:none;width:42px;height:42px;align-items:center;justify-content:center;}
@@ -80,7 +80,7 @@
   /* hero */
   .hero{position:relative;padding:96px 0 120px;overflow:hidden;}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--neon-cyan);font-weight:600;border:1px solid rgba(52,232,218,.35);padding:6px 14px;border-radius:999px;background:rgba(52,232,218,.06);}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--neon-cyan);font-weight:600;border:1px solid rgba(52,232,218,.35);padding:6px 14px;border-radius:999px;background:rgba(52,232,218,.08);}
   .eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--neon-cyan);box-shadow:0 0 8px var(--neon-cyan);}
   .hero h1{font-size:46px;font-weight:900;line-height:1.25;margin:22px 0 18px;}
   .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--neon-violet),var(--neon-pink));-webkit-background-clip:text;background-clip:text;color:transparent;}
@@ -183,7 +183,7 @@
   .sub-row{display:flex;justify-content:space-between;margin-bottom:16px;font-weight:700;}
   .checkout-btn{width:100%;justify-content:center;}
 
-  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bg-panel-2);border:1px solid var(--neon-cyan);color:var(--text-primary);padding:13px 24px;border-radius:11px;font-size:14px;font-weight:600;opacity:0;transition:.3s var(--ease);z-index:99;box-shadow:0 10px 30px -10px rgba(52,232,218,.4);}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bg-panel-2);border:1px solid var(--neon-cyan);color:var(--text-primary);padding:13px 24px;border-radius:10px;opacity:0;transition:opacity .3s var(--ease),transform .3s var(--ease);z-index:100;}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
   @media (max-width:920px){
@@ -230,7 +230,7 @@
     </nav>
     <div class="nav-actions">
       <button class="cart-btn" id="cartBtn" aria-label="فتح السلة">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
         <span class="cart-count" id="cartCount">0</span>
       </button>
       <button class="burger" id="burgerBtn" aria-label="القائمة">
@@ -246,7 +246,7 @@
       <div>
         <span class="eyebrow">منصة تصاميم رقمية جاهزة</span>
         <h1>تصاميمك تستحق <em>عرضًا</em><br>يليق بقيمتها</h1>
-        <p>زاكيستور متجر رقمي لبيع التصاميم الجاهزة — بوسترات، شعارات، وقوالب سوشيال ميديا بجودة استثنائية، جاهزة للتحميل فور الشراء.</p>
+        <p>زاكيستور متجر رقمي لبيع التصاميم الجاهزة — بوسترات، شعارات، وقوالب سوشيال ميديا بجودة استثنائية، جاهزة للتحميل الفوري!</p>
         <div class="hero-actions">
           <a href="#shop" class="btn btn-primary">تصفح التصاميم</a>
           <a href="#features" class="btn btn-ghost">تعرف أكثر</a>
@@ -306,11 +306,14 @@
   <div class="wrap foot-row">
     <div class="logo">
       <svg width="24" height="24" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <path d="M3 13V4.5C3 3.7 3.7 3 4.5 3H13" stroke="url(#lg)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M27 3H35.5C36.3 3 37 3.7 37 4.5V13" stroke="url(#lg)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M3 27V35.5C3 36.3 3.7 37 4.5 37H13" stroke="url(#lg)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M37 27V35.5C37 36.3 36.3 37 35.5 37H27" stroke="url(#lg)" stroke-width="3" stroke-linecap="round"/>
-        <rect x="15.5" y="15.5" width="9" height="9" transform="rotate(45 20 20)" fill="url(#lg)"/>
+        <defs><linearGradient id="lg2" x1="0" y1="0" x2="40" y2="40">
+          <stop offset="0" stop-color="#b348ff"/><stop offset="1" stop-color="#34e8da"/>
+        </linearGradient></defs>
+        <path d="M3 13V4.5C3 3.7 3.7 3 4.5 3H13" stroke="url(#lg2)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M27 3H35.5C36.3 3 37 3.7 37 4.5V13" stroke="url(#lg2)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M3 27V35.5C3 36.3 3.7 37 4.5 37H13" stroke="url(#lg2)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M37 27V35.5C37 36.3 36.3 37 35.5 37H27" stroke="url(#lg2)" stroke-width="3" stroke-linecap="round"/>
+        <rect x="15.5" y="15.5" width="9" height="9" transform="rotate(45 20 20)" fill="url(#lg2)"/>
       </svg>
       <b style="font-family:'Cairo';font-weight:800;font-size:15px;">ZAKISTOR</b>
     </div>
@@ -408,7 +411,7 @@ function updateCart(){
   if(ids.length === 0){
     drawerBody.innerHTML = `
       <div class="empty-cart">
-        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
         <p>سلتك فارغة حاليًا.<br>تصفح المتجر وأضف التصاميم التي تناسبك.</p>
       </div>`;
     drawerFoot.innerHTML = '';
